@@ -1,0 +1,13 @@
+.card-stat {
+    -fx-background-color: -color-bg-default;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 16 16 16 16;
+}
+
+.fleet-car-plate {
+    -fx-font-size: 11px;
+    -fx-text-fill: #71717A;
+    -fx-font-family: "Monospaced";
+}
