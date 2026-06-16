@@ -1,9 +1,256 @@
+/* ===== ROOT ===== */
+
+.root {
+    -fx-font-size: 14px;
+    -fx-text-size-3: 11.5px;
+    -color-fg-muted: #57606a;
+    -color-fg-gray: #F4F4F5;
+}
+
+/* ===== TYPOGRAPHY ===== */
+
+
+.text-size-3 {
+    -fx-font-size: 0.82em;
+}
+
+.label.text-monospaced-size-3 {
+    -fx-font-size: 0.82em;
+    -fx-font-family: "Monospaced";
+}
+
+.label.text-monospaced-size-4 {
+    -fx-font-size: 0.71em;
+    -fx-font-family: "Monospaced";
+}
+
+/* ===== SIDEBAR ===== */
+
+.logo-icon {
+    -fx-background-color: -color-accent-5;
+    -fx-background-radius: 8;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-min-width: 32;
+    -fx-min-height: 32;
+    -fx-max-width: 32;
+    -fx-max-height: 32;
+    -fx-alignment: CENTER;
+}
+
+.sidebar {
+    -fx-border-color: -color-border-default;
+    -fx-border-width: 0 1 1 0;
+    -fx-padding: 0 0 0 15;
+    -fx-spacing: 7;
+}
+
+.sidebar-item {
+
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+/* ===== NAVIGATION ===== */
+
+.nav {
+    -fx-padding: 12 10 8 10;
+}
+
+.nav-section {
+    -fx-font-size: 0.71em;
+    -fx-text-fill: #A1A1AA;
+    -fx-padding: 8 10 4 4;
+}
+
+.nav-item {
+    -fx-padding: 8 10 8 10;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-spacing: 10;
+}
+
+.nav-item:hover {
+    -fx-background-color: -color-fg-gray;
+}
+
+.nav-item-active {
+    -fx-background-color: #EFF6FF;
+}
+
+.nav-item-active .nav-label {
+    -fx-text-fill: #185FA5;
+    -fx-font-weight: bold;
+}
+
+.nav-item-active .nav-icon {
+    -fx-text-fill: #185FA5;
+}
+
+.nav-icon {
+    -fx-font-family: "System";
+    -fx-font-size: 1em;
+    -fx-text-fill: #71717A;
+    -fx-min-width: 18;
+}
+
+.nav-label {
+    -fx-font-size: 0.93em;
+    -fx-text-fill: #52525B;
+}
+
+.nav-badge {
+    -fx-background-color: #EFF6FF;
+    -fx-text-fill: #185FA5;
+    -fx-font-size: 0.79em;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-padding: 1 7 1 7;
+}
+
+.nav-footer {
+    -fx-border-color: -color-border-default;
+    -fx-border-width: 0 1 0 0;
+}
+
+/* ===== SIDEBAR FOOTER ===== */
+
+.avatar {
+    -fx-background-color: -color-accent-0;
+    -fx-text-fill: -color-accent-5;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 50%;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+    -fx-max-width: 30;
+    -fx-max-height: 30;
+    -fx-alignment: CENTER;
+}
+
+.sidebar-footer {
+    -fx-border-color: -color-border-default;
+    -fx-border-width: 1 1 0 0;
+}
+
+/* ===== TOPBAR ===== */
+
+.topbar {
+    -fx-border-color: -color-border-default;
+    -fx-border-width: 0 0 1 0;
+}
+
+.topbar .page-title {
+    -fx-padding: 15 0 0 20;
+}
+
+.topbar .page-subtitle {
+    -fx-padding: 3 0 0 20;
+}
+
+/* ===== BUTTONS ===== */
+
+
+
+/* ===== SCROLL PANE ===== */
+
+.scroll-pane-custom {
+    -fx-background-color: #F4F4F5;
+}
+
+/* ===== STAT CARDS ===== */
+
 .card-stat {
     -fx-background-color: -color-bg-default;
     -fx-border-width: 1px;
     -fx-border-radius: 6px;
     -fx-background-radius: 6px;
     -fx-padding: 16 16 16 16;
+    -fx-spacing: 8;
+}
+
+.label.danger {
+    -fx-text-fill: -color-danger-fg;
+}
+
+.label.success {
+    -fx-text-fill: -color-success-fg;
+}
+
+.stat-number {
+    -fx-font-size: 1.43em;
+}
+
+/* ===== CARD ===== */
+
+.section-title .label {
+    -fx-font-size: 0.82em;
+}
+
+.section-title .hyperlink {
+    -fx-padding: -1 0 0 0;
+    -fx-font-size: 0.82em;
+}
+
+.section-title {
+    -fx-spacing: 5;
+}
+
+/* ===== TABLE ===== */
+
+.rentals-table > .column-header-background .column-header .label {
+    -fx-font-size: 11px;
+    -fx-text-fill: -color-fg-muted;
+    -fx-font-weight: normal;
+}
+.rentals-table > .table-row-cell:hover {
+    -fx-background-color: #F9F9F9;
+}
+
+.rentals-table > .table-cell {
+    -fx-font-size: 12px;
+    -fx-text-fill: #18181B;
+    -fx-border-color: transparent;
+    -fx-padding: 8 8 8 4;
+}
+
+.rentals-table {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.rentals-table .table-row-cell {
+    -fx-background-color: transparent;
+}
+
+.rentals-table .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view > .column-header-background .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* ===== STATUS BADGES ===== */
+
+/* ===== FLEET LIST ITEMS ===== */
+
+.list-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.fleet-item {
+    -fx-padding: 9 0 9 0;
+    -fx-border-color: #E4E4E7;
+    -fx-border-width: 0 0 0.5 0;
+}
+
+.fleet-car-model {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #18181B;
 }
 
 .fleet-car-plate {
@@ -11,3 +258,22 @@
     -fx-text-fill: #71717A;
     -fx-font-family: "Monospaced";
 }
+
+.fleet-icon-box {
+    -fx-background-color: #F4F4F5;
+    -fx-background-radius: 8;
+    -fx-min-width: 34;
+    -fx-min-height: 34;
+    -fx-max-width: 34;
+    -fx-max-height: 34;
+    -fx-alignment: CENTER;
+}
+
+.avail-text {
+    -fx-font-size: 11px;
+    -fx-text-fill: #71717A;
+}
+
+.dot-green { -fx-text-fill: #639922; -fx-font-size: 10px; }
+.dot-amber { -fx-text-fill: #BA7517; -fx-font-size: 10px; }
+.dot-red   { -fx-text-fill: #A32D2D; -fx-font-size: 10px; }

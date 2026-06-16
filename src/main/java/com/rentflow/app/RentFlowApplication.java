@@ -13,5 +13,4 @@ public class RentFlowApplication {
     public static void main(String[] args) {
         new SpringApplicationBuilder(RentFlowApplication.class).headless(false).run(args);
     }
-
 }
