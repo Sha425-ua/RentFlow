@@ -47,8 +47,8 @@ public class SpringStageManager {
         stage.sizeToScene();
         stage.setTitle("RentFlow");
 
-        stage.setMinWidth(1000);
-        stage.setMinHeight(574);
+        stage.setMinWidth(800);
+        stage.setMinHeight(400);
         stage.show();
     }
 
@@ -64,7 +64,7 @@ public class SpringStageManager {
                     getClass().getResource("/com/rentflow/app/view/css/custom-style.css").toExternalForm()
             );
 
-            stage.setScene(scene); // ← використовує збережений stage
+            stage.setScene(scene);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
