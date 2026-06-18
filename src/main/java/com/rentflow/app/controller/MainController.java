@@ -4,6 +4,7 @@ import com.rentflow.app.SpringStageManager;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import java.io.IOException;
 @Component
 public class MainController {
 
+    @FXML private BorderPane rootPane;
     @FXML private VBox contentArea;
     @FXML private HBox navDashboardButton;
     @FXML private HBox navCarsButton;
@@ -22,6 +24,8 @@ public class MainController {
     @FXML private HBox navRentalsButton;
     @FXML private HBox navReportsButton;
     @FXML private HBox navSettingsButton;
+    @FXML private VBox sidebar;
+    @FXML private HBox topLogoContainer;
 
     @Autowired private SpringStageManager stageManager;
 
@@ -94,5 +98,30 @@ public class MainController {
     public void initialize() {
         loadSubView("/com/rentflow/app/view/fxml/dashboard-view.fxml");
         setActiveNav(navDashboardButton);
+
+        rootPane.sceneProperty().addListener((obs, oldScene, newScene) -> {
+            if (newScene != null) {
+                newScene.widthProperty().addListener((o, oldVal, newVal) -> {
+                    double width = newVal.doubleValue();
+
+                    if (width < 800) {
+                        if (rootPane.getLeft() != null) {
+                            rootPane.setLeft(null);
+                            topLogoContainer.setVisible(false);
+                            topLogoContainer.setManaged(false);
+                        }
+                    } else {
+                        if (rootPane.getLeft() == null) {
+                            rootPane.setLeft(sidebar);
+                            topLogoContainer.setVisible(true);
+                            topLogoContainer.setManaged(true);
+                        }
+                    }
+                });
+            }
+        });
     }
+    
+
+
 }
