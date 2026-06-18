@@ -24,33 +24,6 @@
     -fx-font-family: "Monospaced";
 }
 
-/* ===== SIDEBAR ===== */
-
-.logo-icon {
-    -fx-background-color: -color-accent-5;
-    -fx-background-radius: 8;
-    -fx-text-fill: white;
-    -fx-font-size: 16px;
-    -fx-min-width: 32;
-    -fx-min-height: 32;
-    -fx-max-width: 32;
-    -fx-max-height: 32;
-    -fx-alignment: CENTER;
-}
-
-.sidebar {
-    -fx-border-color: -color-border-default;
-    -fx-border-width: 0 1 1 0;
-    -fx-padding: 0 0 0 15;
-    -fx-spacing: 7;
-}
-
-.sidebar-item {
-
-    -fx-background-radius: 8;
-    -fx-cursor: hand;
-}
-
 /* ===== NAVIGATION ===== */
 
 .nav {
@@ -121,10 +94,10 @@
     -fx-font-size: 11px;
     -fx-font-weight: bold;
     -fx-background-radius: 50%;
-    -fx-min-width: 30;
-    -fx-min-height: 30;
-    -fx-max-width: 30;
-    -fx-max-height: 30;
+    -fx-min-width: 34;
+    -fx-min-height: 34;
+    -fx-max-width: 34;
+    -fx-max-height: 34;
     -fx-alignment: CENTER;
 }
 
@@ -135,26 +108,69 @@
 
 /* ===== TOPBAR ===== */
 
-.topbar {
+.logo-icon {
+    -fx-background-color: -color-accent-5;
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-min-width: 32;
+    -fx-min-height: 32;
+    -fx-max-width: 32;
+    -fx-max-height: 32;
+    -fx-alignment: CENTER;
+}
+
+.logo-container {
     -fx-border-color: -color-border-default;
-    -fx-border-width: 0 0 1 0;
+    -fx-border-width: 0 1 0 0;
+    -fx-padding: 0 0 0 15;
+    -fx-spacing: 10;
+}
+
+.topbar {
+    -fx-background-color: -color-border-default, -color-bg-default;
+    -fx-background-insets: 0, 0 0 1 0;
+}
+
+.topbar .app-title-container {
+    -fx-spacing: 3;
+}
+
+.topbar .scene-title-container {
+    -fx-spacing: 3;
+    -fx-padding: 0 0 0 20;
 }
 
 .topbar .page-title {
-    -fx-padding: 15 0 0 20;
+    -fx-font-size: 1.20em;
+    -fx-font-weight: normal;
+    -fx-text-fill: #18181B;
 }
 
 .topbar .page-subtitle {
-    -fx-padding: 3 0 0 20;
 }
+
 
 /* ===== BUTTONS ===== */
 
+.button-primary {
+    -fx-background-radius: 8;
+}
+
+.button-primary:hover {
+    -fx-background-color: #185FA5;
+}
 
 
 /* ===== SCROLL PANE ===== */
 
 .scroll-pane-custom {
+    -fx-background-color: #F4F4F5;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.scroll-pane-custom > .viewport {
     -fx-background-color: #F4F4F5;
 }
 
