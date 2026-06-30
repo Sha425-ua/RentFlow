@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "rentals")
 @Getter
@@ -37,10 +39,12 @@ public class Rental {
     @Column(name = "end_odometer")
     private Integer endOdometer;
 
+    @OneToOne(mappedBy = "rental", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Deposit deposit;
 
+    @OneToMany(mappedBy = "rental", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Payment> payments;
 
-
-
-
-
+    @OneToMany(mappedBy = "rental", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Damage> damages;
 }

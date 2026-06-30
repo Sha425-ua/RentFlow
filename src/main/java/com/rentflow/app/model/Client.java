@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.mapping.List;
+import java.util.List;
 
 @Entity
 @Table(name = "clients")
@@ -32,5 +32,5 @@ public class Client {
     private String driverLicense;
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
-    private List rentals;
+    private List<Rental> rentals;
 }
